@@ -1,0 +1,92 @@
+:root {
+--background-color-main: #ffffff;
+--background-color-second: #2F303A;
+--background-color-third: #F5F4FA;
+--font-color-main: #757575;
+--font-color-headings: #212121;
+--button-color-primary: #2196F3;
+--button-color-secondary: #F5F4FA;
+}
+
+body {
+color: var(--font-color-main);
+background-color: var(--background-color-main);
+}
+
+.list {
+list-style: none;
+}
+
+.section-title,
+ .title{
+color: var(--font-color-headings);
+}
+/* Header */
+.logo {
+color: var(--button-color-primary);
+}
+
+.site-nav .link {
+color: var(--font-color-headings);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+color: var(--button-color-primary);
+}
+
+.contacts .link {
+color: var(--font-color-main);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+color: var(--button-color-primary);
+}
+
+/* Hero */
+.hero {
+
+background-image: url("../images/bg1.jpg");
+background-size: cover;
+padding-top: 212px;
+padding-bottom: 297px;
+}
+
+.hero-title {
+color: #ffffff;
+}
+
+.hero-button{
+color: #ffffff;
+background-color: var(--button-color-primary);
+border: transparent;
+}
+
+/* Advantages */
+
+/* What we do */
+/* Our team */
+.our-team {
+background-color: var(--background-color-third);
+}
+/* Section Regular Customers */
+
+/* Footer */
+.footer {
+background-color: var(--background-color-second);
+}
+.footer-contacts .link {
+color: rgba(255, 255, 255, 0.6);
+}
+.action-text {
+color: #ffffff;
+}
+
+.subscribe-button {
+color: #ffffff;
+background-color: var(--button-color-primary);
+border: transparent;
+}
+
+
