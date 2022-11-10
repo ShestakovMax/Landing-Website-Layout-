@@ -305,14 +305,54 @@ color: #ffffff;
 }
 /********************** Our team *************************/
 .our-team-section {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
 background-color: var(--background-color-third);
 }
 
+.team-list{
+position: relative;
+width: 100%;
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding-bot: 50px;
+
+}
+
+.team-box{
+width: 270px;
+height: 430px;
+
+border-radius: 10px;
+box-sizing: border-box;
+margin: 15px;
+
+background-color: #ffffff;
+box-shadow: 0 2px 5px -2px;
+}
+
+.team-social-links{
+position: relative;
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 15px;
+}
+
 .our-team-title{
+position: relative;
+text-align: center;
+
 font-weight: 500;
 font-size: 16px;
 line-height: 1.19;
-text-align: center;
+
 }
 
 .our-team-text{
@@ -323,7 +363,29 @@ text-align: center;
 }
 
 /************************* Section Regular Customers *****************************/
+.customers-section{
+position: relative;
+height:322px;
 
+transform: translateY(40px);
+
+}
+.customers-title{
+position: relative;
+height:80px;
+}
+
+.customers-list{
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.customer{
+padding: 12px;
+}
 /*********************** Footer *****************************/
 .footer {
 background-color: var(--background-color-second);
