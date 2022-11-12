@@ -8,6 +8,10 @@
 --button-color-secondary: #F5F4FA;
 }
 
+html{
+scroll-behavior: smooth;
+}
+
 body {
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
@@ -193,19 +197,58 @@ text-align: center;
 letter-spacing: 0.06em;
 
 color: #ffffff;
-background-color: var(--button-color-primary);
+background-color: transparent;
 border: transparent;
 
+
 margin: 0%;
-padding: 10.6px;
-padding-right: 19px
-padding-right: 20px;
+padding-left: 11px;
+
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 
-
+overflow:hidden;
+box-shadow:
+0 0 0 0 rgba(143, 64, 248, 0.5),
+0 0 0 0 rgba(39, 200, 255, 0.5);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+z-index: 2;
 }
 
+.hero-button::after {
+content:'';
+position:absolute;
+height:100%;
+width: 400px;
+height: 400px;
+top: -50px;
+left: -100px;
+background-color: #ff3cac;
+background-image: linear-gradient(
+225deg,
+#27d86c 0%,
+#26caf8 50%,
+#c625d0 100%
+);
+z-index: -1;
+transition: transform 0.5s ease;
+}
+
+.hero-button:hover{
+transform: translate(0, -6px);
+box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
+}
+.hero-button:hover::after{
+transform: rotate(150deg);
+}
+
+.flex{
+width: 100%;
+height: 500px;
+height: 100%;
+display: flex;
+padding: 20px;
+}
 /******************* Advantages ******************/
 .advantages-list{
 position: relative;

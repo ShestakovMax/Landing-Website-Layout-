@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-</head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" >
+    <link rel="stylesheet" href=".//css/styles.css" />
 <body>
+<!-- Page header-->
 <header>
-    <nav>
-        <a href="/" >Web Studio</a>
-        <ul>
-            <li><a href="/studio">Studio</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contacts">Contacts</a></li>
+    <div class="top-box">
+        <div class="logo-box">
+            <a class="logo" href=".//index.html">Web Studio</a>
+        </div>
+
+        <nav>
+            <ul class="site-nav list">
+                <li><a class="link" href=".//Studio.html">Studio</a></li>
+                <li><a class="link" href=".//Portfolio.html">Portfolio</a></li>
+                <li><a class="link" href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+        <ul class="contacts list">
+            <li><a class="link" href="mailto:info@devstudio.com"><img src="./images//envelope(hover).jpg" alt="email" />info@devstudio.com</a></li>
+            <li><a class="link" href="tel:+380961111111"><img src="images/smartphone.jpg" alt="phone number" />+38 096 111 11 11</a></li>
         </ul>
-    </nav>
-    <ul>
-        <li><a href="mailto:info@devstudio.com"><img src="./images//envelope(hover).jpg" alt="email" />info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111"><img src="images/smartphone.jpg" alt="phone number" />+38 096 111 11 11</a></li>
-    </ul>
+    </div>
 </header>
 <main>
-
+    <section class="flex">
+        <p>Some text</p>
+        <button class="hero-button" type="button">Request our service</button>
+    <p>Some more text</p>
+    </section>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at commodi impedit ipsam molestiae natus quis quisquam quod ratione veritatis!</p>
+    </section>
 </main>
 <footer>
-    <div>
-        <a href="/">Web Studio</a>
-        <address>695 Park Ave, New York, NY 10065, United States</address>
-        <ul>
-            <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-        </ul>
-    </div>
-    <div>
-        <b>Find us on</b>
-        <ul>
-            <li><a href=""><img src="images/Ellipse(4).jpg" alt="" /></a></li>
-            <li><a href=""><img src="images/Ellipse(5).jpg" alt="" /></a></li>
-            <li><a href=""><img src="images/Ellipse(6).jpg" alt="" /></a></li>
-            <li><a href=""><img src="images/Ellipse(7).jpg" alt="" /></a></li>
-        </ul>
+    <div class="footer">
+        <div class="footer-contact-us" id="contacts">
+            <a class="logo" href=".//index.html">Web Studio</a>
+            <address>695 Park Ave, New York, NY 10065,<br> United States</address>
+            <ul class="footer-contacts list">
+                <li><a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li><a class="link contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+        </div>
+        <div class="footer-social-links">
+            <b class="action-text">Find us on</b>
+            <ul class="list social-links-bottom">
+                <li class="social-link"><a href=""><img src="images/Ellipse(4).jpg" alt="" /></a></li>
+                <li class="social-link"><a href=""><img src="images/Ellipse(5).jpg" alt="" /></a></li>
+                <li class="social-link"><a href=""><img src="images/Ellipse(6).jpg" alt="" /></a></li>
+                <li class="social-link"><a href=""><img src="images/Ellipse(7).jpg" alt="" /></a></li>
+            </ul>
+        </div>
+
+        <form class= "subscribe-form" method="post" action="/">
+            <b class="action-text">Subscribe to the newsletter</b>
+            <input class="placeholder" type="email" name="email_address" placeholder="E-mail" />
+            <button type="submit" class="button subscribe-button">Subscribe <span class="glyphicon glyphicon-send"></span></button>
+        </form>
     </div>
 
-    <form method="post" action="/">
-        <b>Subscribe to the newsletter</b>
-        <input type="email" name="email_address" placeholder="E-mail" />
-        <button type="submit" class="btn btn-warning">Subscribe <span class="glyphicon glyphicon-send"></span></button>
-    </form>
 </footer>
 </body>
 </html>
