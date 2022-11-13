@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <title>Portfolio</title>
+    <script src=
+                    "https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
     <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
     <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" >
@@ -15,59 +18,130 @@
         <div class="logo-box">
             <a class="logo" href=".//index.html">Web Studio</a>
         </div>
-
         <nav>
-            <ul class="site-nav list">
-                <li><a class="link" href=".//Studio.html">Studio</a></li>
-                <li><a class="link" href=".//Portfolio.html">Portfolio</a></li>
-                <li><a class="link" href="#contacts">Contacts</a></li>
+            <ul class="list site-nav">
+                <li><a class="link navigation-item" href="#studio">Studio</a></li>
+                <li><a class="link navigation-item" href=".//Portfolio.html">Portfolio</a></li>
+                <li><a class="link navigation-item" href="#contacts">Contacts</a></li>
             </ul>
         </nav>
-        <ul class="contacts list">
+        <ul class="list contacts">
             <li><a class="link" href="mailto:info@devstudio.com"><img src="./images//envelope(hover).jpg" alt="email" />info@devstudio.com</a></li>
             <li><a class="link" href="tel:+380961111111"><img src="images/smartphone.jpg" alt="phone number" />+38 096 111 11 11</a></li>
         </ul>
     </div>
 </header>
 <main>
-    <section class="flex">
-        <p>Some text</p>
-        <button class="hero-button" type="button">Request our service</button>
-    <p>Some more text</p>
-    </section>
-    <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Amet, at commodi impedit ipsam molestiae natus quis quisquam
-            quod ratione veritatis!</p>
+    <section class="section portfolio-box">
+        <h1 class="section title">Portfolio</h1>
+        <fieldset class="portfolio-categories">
+            <label class="portfolio-category" >
+                <input  type="radio" id="all" name="radio" value="All" checked/>
+                <span>All</span>
+            </label>
+            <label class="portfolio-category">
+                <input type="radio" id="web-sites" name="radio" value="Web-sites"/>
+                <span>Web-sites</span>
+            </label>
+            <label class="portfolio-category">
+                <input type="radio" id="apps" name="radio" value="Apps"/>
+                <span>Apps</span>
+            </label>
+            <label class="portfolio-category">
+                <input type="radio" id="design" name="radio" value="Design"/>
+                <span>Design</span>
+            </label>
+            <label class="portfolio-category" >
+                <input type="radio" id=marketing" name="radio" value="Marketing"/>
+                <span>Marketing</span>
+            </label>
+        </fieldset>
+        <ul class="list categories-list">
+            <li class="categories-list-element All Web-sites selectt">
+                <img class="image" src=".//images/p1.jpg" alt="website on laptop">
+                <h2 class="title">Technoduck</h2>
+                <p>Web-sites</p>
+            </li>
+            <li class="categories-list-element All Design selectt">
+                <img class="image" src=".//images/p2.jpg" alt="two men playing basketball">
+                <h2 class="title">Poster New Orlean vs Golden Star</h2>
+                <p>Design</p>
+            </li>
+            <li class="categories-list-element All Apps selectt">
+                <img class="image" src=".//images/p3.jpg" alt="fish and seafood restaurant name">
+                <h2 class="title">Seafood Restaurant</h2>
+                <p>Apps</p>
+            </li>
+            <li class="categories-list-element All Marketing selectt">
+                <img class="image" src=".//images/p4.jpg" alt="headphones">
+                <h2 class="title">Project Prime</h2>
+                <p>Marketing</p>
+            </li>
+            <li class="categories-list-element All Apps selectt ">
+                <img class="image" src=".//images/p5.jpg" alt="two small boxes">
+                <h2 class="title">Project Boxes</h2>
+                <p>Apps</p>
+            </li>
+            <li class="categories-list-element All Web-sites selectt">
+                <img class="image" src=".//images/p6.jpg" alt="cool website on screen">
+                <h2 class="title">Inspiration has no Borders</h2>
+                <p>Web-sites</p>
+            </li>
+            <li class="categories-list-element All Design selectt">
+                <img class="image" src=".//images/p7.jpg" alt="magazine">
+                <h2 class="title">Limited Edition</h2>
+                <p>Design</p>
+            </li>
+            <li class="categories-list-element All Marketing selectt">
+                <img class="image" src=".//images/p8.jpg" alt="label tag">
+                <h2 class="title">Project LAB</h2>
+                <p>Marketing</p>
+            </li>
+            <li class="categories-list-element All Apps selectt">
+                <img class="image" src=".//images/p9.jpg" alt="hands typing text on laptop">
+                <h2 class="title">Growing Business</h2>
+                <p>Apps</p>
+            </li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('input[type="radio"]').click(function() {
+                    var inputValue = $(this).attr("value");
+                    var targetBox = $("." + inputValue);
+                    $(".selectt").not(targetBox).hide();
+                    $(targetBox).show();
+                });
+            });
+        </script>
     </section>
 </main>
-<footer>
-    <div class="footer">
-        <div class="footer-contact-us" id="contacts">
-            <a class="logo" href=".//index.html">Web Studio</a>
-            <address>695 Park Ave, New York, NY 10065,<br> United States</address>
-            <ul class="footer-contacts list">
-                <li><a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="link contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul>
-        </div>
-        <div class="footer-social-links">
-            <b class="action-text">Find us on</b>
-            <ul class="list social-links-bottom">
-                <li class="social-link"><a href=""><img src="images/Ellipse(4).jpg" alt="" /></a></li>
-                <li class="social-link"><a href=""><img src="images/Ellipse(5).jpg" alt="" /></a></li>
-                <li class="social-link"><a href=""><img src="images/Ellipse(6).jpg" alt="" /></a></li>
-                <li class="social-link"><a href=""><img src="images/Ellipse(7).jpg" alt="" /></a></li>
-            </ul>
-        </div>
 
-        <form class= "subscribe-form" method="post" action="/">
-            <b class="action-text">Subscribe to the newsletter</b>
-            <input class="placeholder" type="email" name="email_address" placeholder="E-mail" />
-            <button type="submit" class="button subscribe-button">Subscribe <span class="glyphicon glyphicon-send"></span></button>
-        </form>
-    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-contact-us" id="contacts">
+                <a class="logo" href=".//index.html">Web Studio</a>
+                <address>695 Park Ave, New York, NY 10065,<br> United States</address>
+                <ul class="footer-contacts list">
+                    <li><a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="link contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-links">
+                <b class="action-text">Find us on</b>
+                <ul class="list social-links-bottom">
+                    <li class="social-link"><a href=""><img src="images/Ellipse(4).jpg" alt="" /></a></li>
+                    <li class="social-link"><a href=""><img src="images/Ellipse(5).jpg" alt="" /></a></li>
+                    <li class="social-link"><a href=""><img src="images/Ellipse(6).jpg" alt="" /></a></li>
+                    <li class="social-link"><a href=""><img src="images/Ellipse(7).jpg" alt="" /></a></li>
+                </ul>
+            </div>
 
-</footer>
+            <form class= "subscribe-form" method="post" action="/">
+                <legend class="action-text">Subscribe to the newsletter</legend>
+                <input class="placeholder" type="email" name="email_address" placeholder="E-mail" />
+                <button type="submit" class="button subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
