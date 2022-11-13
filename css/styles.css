@@ -44,7 +44,7 @@ list-style: none;
 
 .section-title{
 font-weight: 700;
-font-size: 36px;
+font-size: clamp(2rem, 2.5vw, 2.57rem);
 line-height: 1.66;
 text-align: center;
 letter-spacing: 0.03em;
@@ -182,11 +182,11 @@ background-position: top;
 .hero-title {
 position: relative;
 
-height: 127.2px;
+max-height: 127.2px;
 
 
 font-weight: 900;
-font-size: 44px;
+font-size: clamp(2rem, 2.5vw, 3.14rem);
 line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
@@ -194,7 +194,7 @@ text-transform: uppercase;
 
 color: #ffffff;
 
-margin: 0%;
+margin-bottom: 1em;
 }
 
 .hero-button{
@@ -214,7 +214,7 @@ letter-spacing: 0.06em;
 color: #ffffff;
 background-color: transparent;
 border: transparent;
-
+cursor: pointer;
 
 margin: 0%;
 padding-left: 7px;
@@ -275,7 +275,7 @@ flex-wrap: wrap;
 justify-content: center;
 
 margin: 0%;
-padding top: 15px;
+padding: 15px 0px;
 }
 
 .title-advantages{
@@ -296,7 +296,7 @@ margin-top: 60px;
 }
 
 .advantages-text{
-width: 270px;
+max-width: 270px;
 }
 
 /****************** What we do *****************/
@@ -306,7 +306,7 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-padding: 15px;
+padding: 15px 0px;
 
 
 }
@@ -381,7 +381,7 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-padding-bot: 50px;
+padding: 0px 0px 50px 0px;
 
 }
 
@@ -434,7 +434,8 @@ transform: translateY(40px);
 }
 .customers-title{
 position: relative;
-height:80px;
+max-height: 80px;
+
 }
 
 .customers-list{
@@ -446,6 +447,7 @@ justify-content: center;
 align-items: center;
 
 padding-bottom: 100px;
+padding-inline-start: 0px;
 }
 
 .customer{
@@ -510,10 +512,12 @@ padding-right: 10px;
 .subscribe-form{
 position: relative;
 display: flex;
+
+align-items: center;
 flex-wrap: wrap;
 flex-direction: column;
 text-align: left;
-
+z-index: 1;
 
 }
 
@@ -526,31 +530,87 @@ line-height: 1.14px;
 text-transform: uppercase;
 
 color: #ffffff;
+z-index: 1;
 }
 
 .placeholder{
+max-width: 10em;
 position: relative;
 font-weight: 700;
 font-size: 23px;
 line-height: 1.14px;
-
-
 margin-top: 14px;
 box-border: transparent;
+z-index: 1;
 }
 
 .subscribe-button {
-padding: 20px;
+width: 236px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 20px 0px;
 margin-top: 10px;
 font-weight: 700;
 font-size: 14px;
 line-height: 1.14px;
+letter-spacing: 1px;
 text-transform: uppercase;
+color: var(--button-color-primary);
+background-color: transparent;
+border: 3px solid var(--button-color-primary);
+border-radius: 0.25em;
+text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.4), 0 0 0.45em var(--button-color-primary);
+cursor: pointer;
+box-shadow: 0 0 0.5em 0 var(--button-color-primary), inset 0 0 0.5em 0 var(--button-color-primary);
+transition: 0.2s;
+z-index: 1;
+overflow: hidden;
 
+}
 
-color: #ffffff;
+.subscribe-button:hover,
+.subscribe-button:focus{
 background-color: var(--button-color-primary);
-border: transparent;
+color: var(--background-color-second);
+text-shadow: none;
+letter-spacing: 3px;
+
+}
+.subscribe-button::before{
+content: '';
+position: absolute;
+pointer-events: none;
+background: var(--button-color-primary);
+top: 80%;
+left: 0;
+width: 100%;
+height: 20%;
+
+transform: perspective(4em) rotateX(40deg) scale(1, 0.5);
+filter: blur(1em);
+opacity: 0.7;
+}
+.subscribe-button::after{
+content: '';
+position: absolute;
+box-shadow: 0 0 2em 0.6em var(--button-color-primary);
+pointer-events: none;
+border: 0px solid var(--button-color-primary);
+top: 39%;
+bottom: 0;
+right: 0;
+left: 2px;
+width: 98%;
+height: 27%;
+background-color: var(--button-color-primary);
+opacity: 0;
+transition: opacity 0.2s linear;
+z-index: -1;
+}
+.subscribe-button:hover::after{
+opacity: 1;
 }
 
 /********************************** DESIGN FOR PHONES **********************/
@@ -560,8 +620,7 @@ border: transparent;
 padding-right: 300px;
 }
 }
-@media (max-width: 1350px)
-{
+@media (max-width: 1351px){
 .footer{
 flex-direction: column;
 padding: 60px 0px;
@@ -585,7 +644,14 @@ text-align: center;
 .subscribe-button{
 padding-left: 100px;
 }
+.subscribe-button::before{
+top: 143%;
+transform: perspective(4em) rotateX(40deg) scale(1, 0.5);
+filter: blur(1em);
 }
+}
+
+
 
 @media (max-width: 1200px)
 {
@@ -606,4 +672,5 @@ padding-left: 10px;
 .contacts{
 margin: 0;
 padding: 0;
+}
 }
