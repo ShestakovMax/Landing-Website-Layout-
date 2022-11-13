@@ -649,6 +649,9 @@ top: 143%;
 transform: perspective(4em) rotateX(40deg) scale(1, 0.5);
 filter: blur(1em);
 }
+.subscribe-button::after{
+top: 400%;
+}
 }
 
 
